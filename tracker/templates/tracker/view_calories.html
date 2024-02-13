@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Calories</title>
+    <link rel="stylesheet" href="{% static 'tracker/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Calorie Intake</h2>
+        <div class="total-calories-container">
+            <p class="total-calories">Total Calories Consumed: {{ total_calories }}</p>
+        </div>
+        <ul class="food-list">
+            {% for item in food_items %}
+            <li class="food-item">
+                <span class="food-name">{{ item.name }}</span> - <span class="calories">{{ item.calories }}</span> calories
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

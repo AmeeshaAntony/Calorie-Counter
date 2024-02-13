@@ -1,0 +1,50 @@
+/* view_calories_styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightseagreen; /* Set background color */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+.total-calories-container {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.total-calories {
+    margin: 0;
+}
+
+.food-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.food-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.food-name {
+    font-weight: bold;
+}
+
+.calories {
+    color: #555;
+}

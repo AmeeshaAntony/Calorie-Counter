@@ -1,0 +1,44 @@
+/* add_food_styles.css */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightseagreen; /* Set the background color to yellow */
+}
+
+form {
+    max-width: 400px; /* Adjust this value based on your preference */
+    width: 100%;
+    padding: 100px;
+    border: 1px solid green; /* Set the border color to green */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: lightblue;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: calc(100% - 16px); /* Subtract padding from the width */
+    padding: 8px;
+    margin: 0 auto; /* Center the input field horizontally */
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
