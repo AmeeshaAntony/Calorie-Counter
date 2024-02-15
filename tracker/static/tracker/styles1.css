@@ -22,6 +22,10 @@ label {
     display: block;
     margin-bottom: 5px;
 }
+h1 {
+    text-align: center;
+    margin: 0 0 20px; /* Adjusted margin */
+}
 
 input[type="text"] {
     width: calc(100% - 16px); /* Subtract padding from the width */

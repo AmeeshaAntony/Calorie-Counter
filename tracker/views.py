@@ -1,13 +1,20 @@
 from django.shortcuts import render, redirect
 from .models import FoodItem
+from .forms import FoodItemForm
+
+def food_list(request):
+    foods = FoodItem.objects.all()
+    return render(request, 'tracker/food_list.html', {'foods': foods})
 
 def add_food(request):
     if request.method == 'POST':
-        name = request.POST.get('name')
-        calories = request.POST.get('calories')
-        FoodItem.objects.create(name=name, calories=calories)
-        return redirect('calorie_counter:home')
-    return render(request, 'tracker/add_food.html')
+        form = FoodItemForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('food_list')
+    else:
+        form = FoodItemForm()
+    return render(request, 'tracker/add_food.html', {'form': form})
 
 def view_calories(request):
     food_items = FoodItem.objects.all()

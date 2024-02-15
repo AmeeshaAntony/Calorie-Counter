@@ -16,11 +16,14 @@ Including another URLconf
 """
 from django.urls import path
 from tracker import views
+from django.contrib import admin
 
 app_name = 'calorie_counter'
 
 urlpatterns = [
-    path('', views.view_calories, name='home'),
+   
+    path('admin/', admin.site.urls),
+    path('', views.food_list, name='food_list'),
     path('add/', views.add_food, name='add_food'),
     path('view/', views.view_calories, name='view_calories'),
 ]

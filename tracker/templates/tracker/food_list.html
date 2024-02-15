@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food List</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'tracker/styles2.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Food List</h1>
+        <a class="add-food-link" href="{% url 'add_food' %}">Add Food Item</a>
+        
+        <div class="food-list-box">
+            <ul class="food-list">
+                {% for food in foods %}
+                <li>
+                    <span class="food-name">{{ food.name }}</span> - <span class="calories">{{ food.calories }} calories</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
